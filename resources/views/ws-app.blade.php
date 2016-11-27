@@ -128,66 +128,67 @@
 
 			@yield('content')
 
-			<div class="col-sm-4 col-md-4">
+			@if(!(Request::is('*/news*')) )
 
-				@if(!(Request::is('*/news/*')) )
+				<div class="col-sm-4 col-md-4">
 
 					<div class="panel panel-default wow fadeInUp">
 
-					<div class="panel-heading">{{ trans('base.latest_news') }}</div>
+						<div class="panel-heading">{{ trans('base.latest_news') }}</div>
 
-					<div class="panel-body">
+						<div class="panel-body">
 
-						<div class="row">
+							<div class="row">
 
-							@foreach($last_news as $last_new)
+								@foreach($last_news as $last_new)
 
-								<div class="r-block-item">
+									<div class="r-block-item">
 
-									<div class="col-md-12"><h4>{{ $last_new->getTranslate('title') }}</h4></div>
+										<div class="col-md-12"><h4>{{ $last_new->getTranslate('title') }}</h4></div>
 
-									@if(count($last_new->getImages()) > 0)
+										@if(count($last_new->getImages()) > 0)
 
-										<div class="col-md-4">
+											<div class="col-md-4">
 
-												<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail">
-													<img src="/{{$last_new->getImages()[0]['min']}}" alt="...">
-												</a>
+													<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail">
+														<img src="/{{$last_new->getImages()[0]['min']}}" alt="...">
+													</a>
 
-										</div>
+											</div>
 
-										<div class="col-md-8">
+											<div class="col-md-8">
 
-									@else
+										@else
 
-										<div class="col-md-12">
+											<div class="col-md-12">
 
-									@endif
+										@endif
 
-										{!! str_limit($last_new->getTranslate('short_description'), 140) !!}
+												{!! str_limit($last_new->getTranslate('short_description'), 140) !!}
 
-										<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+												<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+
+											</div>
+
+											<hr>
 
 									</div>
 
-									<hr>
+								@endforeach
 
-								</div>
+							</div>
 
-							@endforeach
+							<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">{{ trans('base.all_news') }}</a></p>
+
 						</div>
-
-						<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">{{ trans('base.all_news') }}</a></p>
 
 					</div>
 
 				</div>
 
-				@endif
+			@endif
 
-			</div>
-
-	</div>
+		</div>
 
 	</div> {{-- /container --}}
 
@@ -200,7 +201,7 @@
 
 				<div class="col-sm-3 col-md-3 wow fadeInUp">
 
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="/{{ App::getLocale() }}">
 						<img alt="Brand" src="/img/frontend/logo.jpg">
 					</a>
 

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-md-8">
+    <div class="col-md-12">
 
         <div class="panel panel-default wow fadeInUp">
 
@@ -36,7 +36,7 @@
 
                                 <h4>{{ $new->getTranslate('title') }}</h4>
 
-                                {!! str_limit($new->getTranslate('short_description'), 230) !!}
+                                {!! str_limit($new->getTranslate('short_description'), 710) !!}
 
                                 <div class="clearfix">
 
