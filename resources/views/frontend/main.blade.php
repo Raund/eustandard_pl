@@ -2,69 +2,57 @@
 
 @section('content')
 
-    <div class="row">
+    <div class="col-md-12">
 
-        <div class="col-md-12">
+        <div id="webstudio-slider" style="display:none;">
 
-            <!-- start: Slider -->
-            <div id="webstudio-slider" style="display:none;">
+            @foreach($slides as $slide)
 
-                @foreach($slides as $slide)
+                @if(count($slide->getImages()) > 0)
 
-                    @if(count($slide->getImages()) > 0)
+                    <img alt="{{$slide->getTranslate('title')}}"
+                         src="/{{$slide->getImages()[0]['full']}}"
+                         data-image="/{{$slide->getImages()[0]['full']}}"
+                         id="img-{{$slide->id}}"
+                         data-description=" {{$slide->getTranslate('description')}}">
 
-                        <img alt="{{$slide->getTranslate('title')}}"
-                             src="/{{$slide->getImages()[0]['full']}}"
-                             data-image="/{{$slide->getImages()[0]['full']}}"
-                             id="img-{{$slide->id}}"
-                             data-description=" {{$slide->getTranslate('description')}}">
+                @endif
 
-                    @endif
-
-                @endforeach
-
-            </div>
-            <!-- end: Slider -->
+            @endforeach
 
         </div>
 
     </div>
 
-    <!--start: Row -->
+    <div class="col-md-8">
 
-    <div class="row">
+        <div class="panel panel-default wow fadeInLeft">
 
-        <div class="col-md-12">
+            <div class="panel-heading">{{ $main->getTranslate('title') }}</div>
 
-            <div class="panel panel-default wow fadeInLeft">
+            <div class="panel-body">
 
-                <div class="panel-heading">{{ $main->getTranslate('title') }}</div>
+                <div class="col-sm-4 col-md-3">
 
-                <div class="panel-body">
+                    <a href="#" class="thumbnail">
 
-                    <div class="col-sm-4 col-md-3">
+                        @if(count($main->getImages()) > 0)
 
-                        <a href="#" class="thumbnail">
+                             <img src="/{{$main->getImages()[0]['min']}}" alt="...">
 
-                            @if(count($main->getImages()) > 0)
+                        @endif
 
-                                 <img src="/{{$main->getImages()[0]['min']}}" alt="...">
+                    </a>
 
-                            @endif
+                </div>
 
-                        </a>
+                <div class="col-sm-8 col-md-9">
 
-                    </div>
+                    {!! $main->getTranslate('short_description') !!}
 
-                    <div class="col-sm-8 col-md-9">
+                    <div class="description" style="display: none;">{!!$main->getTranslate('description') !!}</div>
 
-                        {!! $main->getTranslate('short_description') !!}
-
-                        <div class="description" style="display: none;">{!!$main->getTranslate('description') !!}</div>
-
-                        <a href="#" class="description-show pull-right">{{ trans('base.more') }}<i class="fa fa-angle-down fa-lg"></i></a>
-
-                    </div>
+                    <a href="#" class="description-show pull-right">{{ trans('base.more') }}<i class="fa fa-angle-down fa-lg"></i></a>
 
                 </div>
 
@@ -72,105 +60,19 @@
 
         </div>
 
-    </div>
+        <div class="panel panel-default wow fadeInLeft">
 
-    <div class="row">
+            <div class="panel-heading">{{ trans('base.video') }}</div>
 
-        <div class="col-sm-6 col-md-6">
+            <div class="panel-body">
 
-            <div class="panel panel-default wow fadeInUp">
-
-                <div class="panel-heading">{{ trans('base.latest_news') }}</div>
-
-                <div class="panel-body">
-
-                    <div class="row">
-
-                        @foreach($last_news as $last_new)
-
-                            <div class="r-block-item">
-
-                                <div class="col-md-4">
-
-                                    @if(count($last_new->getImages()) > 0)
-
-                                        <a href="#" class="thumbnail">
-                                            <img src="/{{$last_new->getImages()[0]['min']}}" style="height:93px" alt="...">
-                                        </a>
-
-                                    @endif
-
-                                </div>
-
-                                <div class="col-md-8">
-
-                                    <h4>{{ $last_new->getTranslate('title') }}</h4>
-
-                                    <p>{!! str_limit($last_new->getTranslate('short_description'), 140) !!}</p>
-
-                                    <a href="#" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
-
-                                </div>
-
-                                <hr>
-
-                            </div>
-
-                        @endforeach
-
-                    </div>
-
-                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">{{ trans('base.all_news') }}</a></p>
-
-                </div>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/FwDaOcotclY" frameborder="0" allowfullscreen></iframe>
 
             </div>
 
         </div>
 
-        <div class="col-sm-6 col-md-6">
-
-            <div class="panel panel-default wow fadeInDown">
-
-                <div class="panel-heading">{{ trans('base.latest_jobs') }}</div>
-
-                <div class="panel-body">
-
-                    <div class="row">
-
-                        @foreach($last_works as $last_work)
-
-                            <div class="r-block-item">
-
-                                <div class="col-md-12">
-
-                                    <h4 class="col-sm-6 col-md-6 text-left r-prof">{{ $last_work->getTranslate('title') }}</h4>
-
-                                    <h4 class="col-sm-6 col-md-6 text-right r-price">{!! $last_work->getTranslate('price') !!}</h4>
-
-                                    <p>{!! str_limit($last_work->getTranslate('short_description'), 215) !!}</p>
-
-                                    <a href="#" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
-
-                                </div>
-
-                                <hr>
-
-                            </div>
-
-                        @endforeach
-
-                    </div>
-
-                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
-
-                </div>
-
-            </div>
-
-        </div>
 
     </div>
-    <!-- Example row of columns -->
 
 @endsection

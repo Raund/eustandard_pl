@@ -27,6 +27,9 @@ return [
 	'all_jobs' => 'Wszystko oferty pracy',
 	'read_full_news' => 'Przeczytaj pełen nowości',
 	/* End Header */
+	/* Main */
+	'video' => 'Prezentacja wideo',
+	/* End Main */
 	/* Gallery Page */
 	'gallery_empty' => 'Brak zdjęcia',
 	/* End Gallery Page */

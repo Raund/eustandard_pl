@@ -61,6 +61,9 @@ ul{
 .panel-body a .fa{
     margin-left: 5px;
 }
+.r-block-item{
+    min-height: 131px;
+}
 .r-block-item hr{
     width: 94%;
     height: 1px;

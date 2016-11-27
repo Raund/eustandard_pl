@@ -27,6 +27,9 @@ return [
 	'all_jobs' => 'All jobs',
 	'read_full_news' => 'Read full news',
 	/* End Header */
+	/* Main */
+	'video' => 'Video presentation',
+	/* End Main */
 	/* Gallery Page */
 	'gallery_empty' => 'Gallery is empty', 
 	/* End Gallery Page */

@@ -38,13 +38,7 @@
 
 		<div class="row">
 
-			<div class="col-md-6 resume-block">
-
-				<a class="main-resume" href="/{{ App::getLocale() }}/resume">{{ trans('base.resume') }}</a>
-
-			</div>
-
-			<ul class="col-md-6 text-right lang">
+			<ul class="col-md-12 text-right lang">
 
 				@foreach($langs as $lang)
 
@@ -107,12 +101,6 @@
 									</a>
 								</li>
 
-								<li @if(Request::is('*/works'))class="active"@endif>
-									<a href="/{{ App::getLocale() }}/works"><i class="fa fa-user"></i><br>
-										{{ trans('base.works') }}
-									</a>
-								</li>
-
 								<li @if(Request::is('*/gallery'))class="active"@endif>
 									<a href="/{{ App::getLocale() }}/gallery"><i class="fa fa-camera"></i><br>
 										{{ trans('base.gallery') }}
@@ -136,7 +124,70 @@
 
 		</div>
 
-		@yield('content')
+		<div class="row" style="min-height: 600px;">
+
+			@yield('content')
+
+			<div class="col-sm-4 col-md-4">
+
+				@if(!(Request::is('*/news/*')) )
+
+					<div class="panel panel-default wow fadeInUp">
+
+					<div class="panel-heading">{{ trans('base.latest_news') }}</div>
+
+					<div class="panel-body">
+
+						<div class="row">
+
+							@foreach($last_news as $last_new)
+
+								<div class="r-block-item">
+
+									<div class="col-md-12"><h4>{{ $last_new->getTranslate('title') }}</h4></div>
+
+									@if(count($last_new->getImages()) > 0)
+
+										<div class="col-md-4">
+
+												<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail">
+													<img src="/{{$last_new->getImages()[0]['min']}}" alt="...">
+												</a>
+
+										</div>
+
+										<div class="col-md-8">
+
+									@else
+
+										<div class="col-md-12">
+
+									@endif
+
+										{!! str_limit($last_new->getTranslate('short_description'), 140) !!}
+
+										<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+
+									</div>
+
+									<hr>
+
+								</div>
+
+							@endforeach
+						</div>
+
+						<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">{{ trans('base.all_news') }}</a></p>
+
+					</div>
+
+				</div>
+
+				@endif
+
+			</div>
+
+	</div>
 
 	</div> {{-- /container --}}
 

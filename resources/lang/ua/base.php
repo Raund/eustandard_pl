@@ -28,6 +28,9 @@ return [
 	'all_jobs' => 'Всі вакансії',
 	'read_full_news' => 'Читати повну новину',
 	/* End Header */
+	/* Main */
+	'video' => 'Відеопрезентація',
+	/* End Main */
 	/* Gallery Page */
 	'gallery_empty' => 'Відсутні фото',
 	/* End Gallery Page */
