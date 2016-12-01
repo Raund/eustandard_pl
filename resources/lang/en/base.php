@@ -54,6 +54,9 @@ return [
 	'resume.tool' => 'Characteristics power tools',
 	'resume.salary' => 'Preferred salary',
 	'resume.file' => 'Attach file summary',
+	'message' => 'Leave a message',
+	'your_message' => 'Message',
+	'email' => 'E-mail',
 	/* End Resume*/
 	/* Contact*/
 	'ukraine_office' => 'Office in Ukraine',

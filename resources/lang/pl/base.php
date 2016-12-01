@@ -54,6 +54,9 @@ return [
 	'resume.tool' => 'Charakterystyka elektronarzędzia',
 	'resume.salary' => 'Korzystne zarobki',
 	'resume.file' => 'Dołączanie pliku podsumowanie',
+	'message' => 'Zostaw wiadomość',
+	'your_message' => 'Wiadomość',
+	'email' => 'E-mail',
 	/* End Resume*/
 	/* Contact*/
 	'ukraine_office' => 'Biuro na Ukrainie',

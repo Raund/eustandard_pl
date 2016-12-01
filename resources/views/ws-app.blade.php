@@ -209,7 +209,7 @@
 
 				</div>
 
-				<div class="col-sm-6 col-md-6 text-center wow fadeInDown">
+				<div class="col-sm-4 col-md-4 text-center wow fadeInDown">
 
 					<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
 					<p>	{{  $texts->get('header.address') }}<br>
@@ -218,7 +218,7 @@
 
 				</div>
 
-				<div class="col-sm-3 col-md-3 text-right wow fadeInLeft">
+				<div class="col-sm-3 col-md-3 text-left wow fadeInLeft">
 
 					<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
 
@@ -226,6 +226,12 @@
 						<li>{{  $texts->get('header.tel1') }}</li>
 						<li>{{  $texts->get('header.tel2') }}</li>
 					</ul>
+
+				</div>
+
+				<div class="col-sm-2 col-md-2 text-right wow fadeInLeft">
+
+					<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/sendmail" role="button">{{ trans('base.all_news') }}</a></p>
 
 				</div>
 

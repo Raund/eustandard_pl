@@ -55,6 +55,9 @@ return [
 	'resume.tool' => 'Володіння електроінструментом',
 	'resume.salary' => 'Бажаний рівень зп',
 	'resume.file' => 'Прикріпити файл резюме',
+	'message' => 'Залишити повідомлення',
+	'your_message' => 'Повідомлення',
+	'email' => 'E-mail',
 	/* End Resume*/
 	/* Contact*/
 	'ukraine_office' => 'Офіс в Укрвїні',

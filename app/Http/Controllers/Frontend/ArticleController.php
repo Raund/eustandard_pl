@@ -29,12 +29,13 @@ class ArticleController extends Controller {
 		$works = null;
 		$slides = null;
 		$gallery = null;
-		switch($type){
-            case 'main':
-				$slides = Category::where('link','=', 'slider')
+		$sendmail = null;
+		switch($type) {
+			case 'main':
+				$slides = Category::where('link', '=', 'slider')
 					->first()
 					->articles()
-					->where('active','=', 1)
+					->where('active', '=', 1)
 					->get()
 					->sortByDesc("priority");
 				//dd($slides);
@@ -49,13 +50,19 @@ class ArticleController extends Controller {
 				break;
 			case 'slider':
 				break;
+/*			case 'sendmail':
+				$sendmail = Category::where('link', '=', 'sendmail')
+					->first()
+					->articles;
+				break;*/
 		}
-
+		
 		 $meta = view()->share('meta', Article::where('name', '=', 'meta.'.$type)->first());
 
 
 		return view('frontend.'.$type, [
 			'slides' => $slides,
+/*			'sendmail' => $sendmail,*/
 		]);
 	}
 
