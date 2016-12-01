@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 01 2016 г., 18:40
+-- Время создания: Дек 01 2016 г., 20:23
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.5.37
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `active` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Дамп данных таблицы `articles`
@@ -83,7 +83,8 @@ INSERT INTO `articles` (`id`, `category_id`, `name`, `title`, `short_description
 (28, 2, '', 'Наші ціни|Nasze Ceny|Our price|', '|||', '<p>Наші ціни не зарплата &quot;під рукою&quot; (нетто) або підраховували платить працівникові виплачується. Після оплати послуг, які ви не повинні платити будь-які відрахування до фонду доходів державного бюджету або страхових компаній.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Згідно з отриманими рахунків-фактур платних робіт (послуг) з урахуванням ПДВ.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Розрахунок служби включає в себе: заробітна плата виплачується працівникові разом з відповідними податків і платежів в страховій компанії, вартість перебування і транспорту *, а також адміністративних витрат компанії і, природно, дохід компанії **.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Але ми завжди намагаємося дати таку цінову пропозицію нашого партнера, який дозволив би йому скоротити витрати, навіть у порівнянні з простими wydatkowaniami прямий зайнятості працівника в його компанії.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skorystawszy з нашими послугами при збереженні вартості Його підприємств.</p>\r\n\r\n<p>&nbsp;&nbsp;* Може покрити компанії-замовника.</p>\r\n\r\n<p>** Пропозиція ціни можуть бути отримані, були представлені нам запит.</p>|<p>Nasze ceny nie są pensją &quot;na rękę&quot; (netto) czy policzoną płacą zarobkową pracownika. Zapłaciwszy za usługi Wam nie trzeba płacić żadnych odliczenie do Rządu Skarbowego czy fundusz&oacute;w ubezpieczalni.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Zgodnie otrzymanej faktury opłacacie prace (usługi) razem z VAT.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Kalkulacja na usługi włącza: płacę zarobkową pracownika razem z odpowiednimi podatkami i wypłatami na ubezpieczalnię, koszty na jego pobyt i transport *, i administracyjne wydatkowania firmy i, naturalnie, doch&oacute;d firmy.**</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Jednak my zawsze staramy się nadać taką cenową propozycję naszemu partnerowi kt&oacute;ra by pozwalała oszczędzać jemu koszty nawet do por&oacute;wnanych z prostymi wydatkowaniami przy bezpośrednim zatrudnieniu pracownika na jego firmie.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Skorystawszy się naszymi usługami zawsze oszczędzacie koszty Swojego Przedsiębiorstwa.</p>\r\n\r\n<p>&nbsp;*Może pokrywać Firma-zleceniodawca.</p>\r\n\r\n<p>** Cenową ofertę można otrzymać nadesławszy nam Zapytanie.</p>|<p>Our prices are not salary &quot;at hand&quot; (net) or counted is paying paid employee. After paying for services you do not have to pay any deduction to the Government Revenue funds or insurance companies.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to the received invoices paid jobs (services) with VAT.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calculation service includes: wages paid employee together with the relevant taxes and payments to the insurance company, the cost of his stay and transport *, and administrative expenditure of the company and, naturally, the company&#39;s revenue. **</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But we always try to give such a pricing proposal to our partner that would allow him to save costs even compared with simple wydatkowaniami the direct employment of an employee at his company.</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skorystawszy with our services whenever you save the cost of His Enterprises.</p>\r\n\r\n<p>&nbsp;&nbsp;* Can cover the company-customer.</p>\r\n\r\n<p>** The price offer can be obtained were submitted to us Query.</p>|', '', 0, '[]', '', 0, '0000-00-00 00:00:00', '|||', '|||', '|||', 1, '2016-11-24 18:20:02', '2016-11-24 18:20:52'),
 (29, 5, '', 'Наш офіс|Nasze biuro|Our office|', '|||', '|||', '', 0, '[{"full":"upload\\/articles\\/29\\/full\\/333.jpg","min":"upload\\/articles\\/29\\/min\\/333.jpg"},{"full":"upload\\/articles\\/29\\/full\\/cool_office_spaces_20.jpg","min":"upload\\/articles\\/29\\/min\\/cool_office_spaces_20.jpg"},{"full":"upload\\/articles\\/29\\/full\\/Dollarphotoclub.jpg","min":"upload\\/articles\\/29\\/min\\/Dollarphotoclub.jpg"},{"full":"upload\\/articles\\/29\\/full\\/Ofis.jpg","min":"upload\\/articles\\/29\\/min\\/Ofis.jpg"}]', '', 5, '0000-00-00 00:00:00', '|||', '|||', '|||', 1, '2016-11-24 18:47:03', '2016-11-25 13:08:27'),
 (30, 5, '', 'Умови праці наших робітників|Warunki pracy naszych pracowników|The working conditions of our workers|', '|||', '|||', '', 0, '[{"full":"upload\\/articles\\/30\\/full\\/10.jpg","min":"upload\\/articles\\/30\\/min\\/10.jpg"},{"full":"upload\\/articles\\/30\\/full\\/555.jpg","min":"upload\\/articles\\/30\\/min\\/555.jpg"},{"full":"upload\\/articles\\/30\\/full\\/666.jpg","min":"upload\\/articles\\/30\\/min\\/666.jpg"},{"full":"upload\\/articles\\/30\\/full\\/7777.jpg","min":"upload\\/articles\\/30\\/min\\/7777.jpg"},{"full":"upload\\/articles\\/30\\/full\\/888.jpg","min":"upload\\/articles\\/30\\/min\\/888.jpg"},{"full":"upload\\/articles\\/30\\/full\\/999.jpg","min":"upload\\/articles\\/30\\/min\\/999.jpg"}]', '', 4, '0000-00-00 00:00:00', '|||', '|||', '|||', 1, '2016-11-25 13:01:39', '2016-11-25 13:09:11'),
-(31, 5, '', 'Продукція наших партнерів|Produkty naszych partnerów|Products of our partners|', '|||', '|||', '', 0, '[{"full":"upload\\/articles\\/31\\/full\\/1.JPG","min":"upload\\/articles\\/31\\/min\\/1.JPG"},{"full":"upload\\/articles\\/31\\/full\\/2.jpg","min":"upload\\/articles\\/31\\/min\\/2.jpg"},{"full":"upload\\/articles\\/31\\/full\\/3.jpg","min":"upload\\/articles\\/31\\/min\\/3.jpg"},{"full":"upload\\/articles\\/31\\/full\\/4.jpg","min":"upload\\/articles\\/31\\/min\\/4.jpg"}]', '', 0, '0000-00-00 00:00:00', '|||', '|||', '|||', 1, '2016-11-25 13:17:55', '2016-11-25 13:21:55');
+(31, 5, '', 'Продукція наших партнерів|Produkty naszych partnerów|Products of our partners|', '|||', '|||', '', 0, '[{"full":"upload\\/articles\\/31\\/full\\/1.JPG","min":"upload\\/articles\\/31\\/min\\/1.JPG"},{"full":"upload\\/articles\\/31\\/full\\/2.jpg","min":"upload\\/articles\\/31\\/min\\/2.jpg"},{"full":"upload\\/articles\\/31\\/full\\/3.jpg","min":"upload\\/articles\\/31\\/min\\/3.jpg"},{"full":"upload\\/articles\\/31\\/full\\/4.jpg","min":"upload\\/articles\\/31\\/min\\/4.jpg"}]', '', 0, '0000-00-00 00:00:00', '|||', '|||', '|||', 1, '2016-11-25 13:17:55', '2016-11-25 13:21:55'),
+(32, 7, 'meta.message', 'Seo для Зворотнього звязку|SEO for Message|Seo для Обратной связи', '', '', '', 0, '', '', 0, '0000-00-00 00:00:00', 'META Title|META Title EN|META Title RU', 'Meta_description|META Description EN|META Description RU', 'META Keywords, META Title, META Title1|META KeywordsEN|META Keywords RU', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -113,8 +114,7 @@ INSERT INTO `categories` (`id`, `name`, `link`, `fields`, `created_at`, `updated
 (6, 'Слайдер', 'slider', '["title","description","gallery","priority","active"]', '2016-11-16 08:33:11', '2016-11-16 08:33:11'),
 (7, 'Seo', 'seo', '["title","meta_title","meta_description","meta_keywords"]', '2016-11-16 08:33:11', '2016-11-16 08:33:11'),
 (8, 'Коментарі', 'comments', '["title","meta_title","meta_description","meta_keywords"]', '2016-11-16 08:33:11', '2016-11-16 08:33:11'),
-(9, 'Резюме', 'resume', '["title","meta_title","meta_description","meta_keywords"]', '2016-11-16 08:33:11', '2016-11-16 08:33:11'),
-(10, 'Відправити повідомлення', 'sendmail', '["title","meta_title","meta_description","meta_keywords"]', '2016-11-16 08:33:11', '2016-11-16 08:33:11');
+(9, 'Резюме', 'resume', '["title","meta_title","meta_description","meta_keywords"]', '2016-11-16 08:33:11', '2016-11-16 08:33:11');
 
 -- --------------------------------------------------------
 
@@ -355,7 +355,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --

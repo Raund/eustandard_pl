@@ -10,8 +10,30 @@
 
             <div class="panel-body">
 
-                <div class="row">
+                <div class="row" style="margin-bottom: 20px">
 
+                    <div class="col-md-6 text-center">
+
+                        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+
+                        <ul class="phone">
+                            <li>{{  $texts->get('header.tel1') }}</li>
+                            <li>{{  $texts->get('header.tel2') }}</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-md-6 text-center">
+
+                        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+
+                        <ul class="phone">
+                            <li>{{  $texts->get('contact.email_ukraine_1') }}</li>
+                            <li>{{  $texts->get('contact.email_ukraine_2') }}</li>
+                        </ul>
+
+                    </div>
+                    
                 </div>
 
             </div>
