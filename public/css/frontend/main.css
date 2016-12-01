@@ -12,7 +12,9 @@ ul{
 .lang li{
     display: inline-block;
     padding: 0 5px;
+    /*
     border-left: 1px solid #158cba;
+    */
     line-height: 16px;
 }
 .lang li:first-child{
@@ -38,19 +40,6 @@ ul{
     padding-bottom: 15px;
     line-height: 30px;
 }
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover{
-    border-top: 3px solid #75CAEB;
-    padding-top: 17px;
-}
-.panel-default>.panel-heading{
-    border-bottom:1px solid #75CAEB;
-    font-size: 20px;
-    font-weight: bold;
-}
 .panel-body a{
     padding-bottom: 10px;
     padding-right: 5px;
@@ -75,7 +64,6 @@ footer {
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 10px;
-    border-top: 1px solid #75CAEB;
     background-color: #fff;
     font-size: 14px;
     -moz-box-shadow: 0px 10px 15px 7px rgba(0,0,0,.2);;
@@ -233,6 +221,7 @@ a.main-resume:hover{
     padding-right: 20px;
     padding-left: 20px;
 }
+/*
 .navbar-fixed-top .navbar-nav>.active>a,
 .navbar-fixed-top .navbar-nav>.active>a:focus,
 .navbar-fixed-top .navbar-nav>.active>a:hover,
@@ -241,6 +230,7 @@ a.main-resume:hover{
     border-top: 3px solid #75CAEB;
     padding-top: 7px;
 }
+*/
 .navbar-fixed-top .navbar-brand{
     padding: 10px;
 }

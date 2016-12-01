@@ -1,15 +1,15 @@
 body{
-    background-image: url("../../img/frontend/bg.jpg")
+    background-image: url("../../img/frontend/bg2.jpg")
 }
 .panel-default>.panel-heading{
     background: none;
+    border-bottom: 1px solid #000;
 }
-.jumbotron, .panel, .progress, .well, .tab-content {
-    border: 1px solid #75caeb;
+.jumbotron, .panel, .progress, .well {
+    border: 1px solid #000;
 }
-.panel, .tab-content {
+.panel {
     border-width: 0 0px 4px;
-    box-shadow: 0 0 15px rgba(0,0,0, .15);
 }
 .panel-body nav{
     text-align: center;
@@ -30,15 +30,15 @@ body{
 }
 .navbar-default {
     background-color: #ffffff;
-    border-color: #75caeb;
+    border-color: #000;
     box-shadow: 0 0 15px rgba(0,0,0, .15);
 }
 .navbar {
     border-width: 0 0 4px;
 }
 .pagination>li>a, .pagination>li>span, .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
-    background-color: #158CBA;
-    border-color: #127BA3;
+    background-color: #686868;
+    border-color: #000;
     color: #fff;
 }
 .pager>li.active>a, .pagination>li.active>a {
@@ -67,4 +67,86 @@ footer .fa-3x{
 }
 footer .navbar-text {
     font-size: 16px;
+}
+.panel {
+    border-width: 0 0px 4px;
+}
+/*
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #000;
+}
+*/
+.btn-primary {
+    color: #fff;
+    background-color: #686868;
+    border-color: #242424;
+}
+.btn-group.open .dropdown-toggle.btn-primary, .btn-primary:focus, .btn-primary:hover {
+    background-color: #686868;
+    border-color: #242424;
+}
+.lang li a{
+    color: #ffffff;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover{
+    border-top: 3px solid #000;
+    padding-top: 17px;
+}
+.panel-default>.panel-heading{
+    border-bottom:1px solid #000;
+    font-size: 20px;
+    font-weight: bold;
+}a, a:hover{
+    color: #000000;
+}
+.navbar-default .navbar-text {
+    color: #000!important;
+}
+.lang li {
+    border-left: 1px solid #ffffff;
+}
+footer{
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,.3) inset;
+}
+.panel {
+    box-shadow: 0 0 15px rgba(0,0,0, .7);
+}
+.carousel-inner>.item>a>img:hover,
+.carousel-inner>.item>img:hover,
+.img-responsive:hover,
+.thumbnail a>img:hover,
+.thumbnail>img:hover {
+    border: 2px solid #000;
+}
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive,
+.thumbnail a>img,
+.thumbnail>img {
+    border: 2px solid #b7c4c7;
+}
+.thumbnail{
+    border: none;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    background-color: #686868;
+    border-color: #000;
+    cursor: default;
+}
+footer {
+    border-top: 1px solid #000;
+}
+.navbar-fixed-top .navbar-nav>.active>a, .navbar-fixed-top .navbar-nav>.active>a:focus, .navbar-fixed-top .navbar-nav>.active>a:hover, .navbar-fixed-top .navbar-nav>li>a:focus, .navbar-fixed-top .navbar-nav>li>a:hover {
+    border-top: 3px solid #000;
+    padding-top: 7px;
+}
+.lang li {
+    border-left: 1px solid #000;
 }

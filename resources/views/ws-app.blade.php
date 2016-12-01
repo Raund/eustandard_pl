@@ -52,7 +52,7 @@
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-12 fix-height">
 
 				<nav class="navbar navbar-default">
 
@@ -72,7 +72,7 @@
 								<img alt="Brand" src="/img/frontend/logo.jpg">
 							</a>
 
-							<p class="navbar-text">EUROSTANDARD sp. z o.o.</p>
+							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
 
 						</div>
 
