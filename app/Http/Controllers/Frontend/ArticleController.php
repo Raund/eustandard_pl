@@ -29,7 +29,6 @@ class ArticleController extends Controller {
 		$works = null;
 		$slides = null;
 		$gallery = null;
-		$sendmail = null;
 		switch($type) {
 			case 'main':
 				$slides = Category::where('link', '=', 'slider')
@@ -50,11 +49,6 @@ class ArticleController extends Controller {
 				break;
 			case 'slider':
 				break;
-/*			case 'sendmail':
-				$sendmail = Category::where('link', '=', 'sendmail')
-					->first()
-					->articles;
-				break;*/
 		}
 		
 		 $meta = view()->share('meta', Article::where('name', '=', 'meta.'.$type)->first());
@@ -62,7 +56,6 @@ class ArticleController extends Controller {
 
 		return view('frontend.'.$type, [
 			'slides' => $slides,
-/*			'sendmail' => $sendmail,*/
 		]);
 	}
 
