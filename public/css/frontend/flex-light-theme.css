@@ -150,3 +150,24 @@ footer {
 .lang li {
     border-left: 1px solid #000;
 }
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:hover,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #686868;
+    border-color: #000;
+}
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color: #686868;
+    border-color: #000;
+}
