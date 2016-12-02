@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Text;
 use App\Models\Lang;
 use League\Flysystem\Config;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 
 class FrontendInit {
 
@@ -52,13 +54,13 @@ class FrontendInit {
 			->articles()
 			->where('active','=', '1')
 			->orderBy("priority", 'desc')
-			->get();
+			->paginate(5);
 		$works = Category::where('link','=', 'works')
 			->first()
 			->articles()
 			->where('active','=', '1')
 			->orderBy("priority", 'desc')
-			->get();
+			->paginate(5);
 		$last_works = Category::where('link','=', 'works')
 			->first()
 			->articles()
