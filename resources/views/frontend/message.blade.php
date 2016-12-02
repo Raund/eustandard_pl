@@ -69,11 +69,19 @@
                             <label for="message"><h4>{{ trans('base.your_message') }}</h4></label>
                             <textarea id="message" name="message" rows="5" class="form-control" aria-describedby="sizing-addon2"></textarea>
                         </div>
-
-                        <input type="submit" value="{{ trans('base.send') }}" class="btn btn-primary btn-lg" style="width: 100%;" href="#" role="button">
+                        <input type="hidden" name="_method" value='post'/>
+                        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                        <input type="submit" value="{{ trans('base.send') }}" name="submit" id="send-message" class="btn btn-primary btn-lg" style="width: 100%;" href="#" role="button">
 
                     </form>
-
+                    {{--Файл переводов--}}
+                    <script>
+                        var trans = {
+                            'base.success': '{{ trans('base.success_send_resume') }}',
+                            'base.error': '{{ trans('base.error_send_resume') }}'
+                        };
+                    </script>
+                    {{--Файл переводов--}}
                 </div>
 
             </div>

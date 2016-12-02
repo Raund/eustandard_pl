@@ -66,6 +66,9 @@ return [
 	/* Footer*/
 	'send' => 'Send',
 	/* End Footer */
-
+	/* Script Resume*/
+	'success_send_resume' => 'Your resume send successfully!',
+	'error_send_resume' => 'Error sending resumes!',
+	/* /Script Resume*/
 
 ];

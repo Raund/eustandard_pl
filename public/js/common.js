@@ -89,11 +89,53 @@ $(function(){
         return false;
     });
 
-});
 
+});
+document.addEventListener("DOMContentLoaded", function(){
+    /* Скрипт формы обратной связи */
+    $('#send-message').on('click',function(e){
+      //  $(this).prop('disabled', false);
+        var name = $("input[name=name]").val();
+        var mobile = $("input[name=mobile]").val();
+        var email = $("input[name=email]").val();
+        var message = $("textarea[name=message]").val();
+        var token = $("input[name=_token]").val();
+       // var data = $('form#message-form').serialize();
+        var data = {
+            name: name,
+            mobile: mobile,
+            email: email,
+            message: message,
+            '_token': token
+        }
+        $.ajax({
+            url : "/send-message",
+            method: "POST",
+            data : data,
+            dataType : "json",
+            success: function(data) {
+                console.log(data);
+                if (data.success) {
+                    swal(trans['base.success'], "", "success");
+                    jQuery("#message-form").trigger("reset");
+                }
+                else {
+                    swal(trans['base.error'], data.message, "error");
+                   // $("#send-message").attr('disabled', false);
+                }
+            },
+            error: function(data) {
+                swal(trans['base.error']);
+            }
+        },'json');
+        e.preventDefault();
+    });
+    /* /Скрипт формы обратной связи 2*/
+});
 /* Скрипт формы обратной связи */
 document.addEventListener("DOMContentLoaded", function(){
     $("#contactform").submit(function(e){
+       //
         e.preventDefault();
         var name = $("input[name=name]").val();
         var email = $("input[name=email]").val();
