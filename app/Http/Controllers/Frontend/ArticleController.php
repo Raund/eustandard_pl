@@ -10,9 +10,14 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Lang;
+use App\Models\Text;
 use App;
 use Illuminate\Support\Facades\Response;
-
+use Validator;
+use Mail;
+use Redirect;
+use Session;
+use Storage;
 //use Illuminate\Contracts\View\View;
 
 class ArticleController extends Controller {
@@ -127,5 +132,30 @@ class ArticleController extends Controller {
 	{
 		//
 	}
+	public function send(Request $request){
+		$validator = Validator::make($request->all(), [
+		'name' => 'required|max:50',
+		'mobile' => 'required|max:20',
+		'email' => "email",
+		'message_body' => 'required',
+		]);
+		if ($validator->fails()) {
+			return Response::json(array(
+				'success' => false,
+				'message' => $validator->messages()->first()
+			));
+		}
+		$all = $request->all();
+		/*dd($data);*/
 
+
+		Mail::send('emails.message', $all, function($message) {
+			$email = Text::where("name","=","config.email")->first();
+			$email = $email['description'];
+			$message->to($email, 'Eurostandard')->subject('Повідомлення з сайту Eurostandard ');
+		});
+		return response()->json([
+			"success" => true
+		]);
+	}
 }

@@ -11,38 +11,6 @@
 |
 */
 
-Route::post('/send-message', function(){
-	if (Request::ajax()){
-		$data = array(
-			'name' => Input::get('name'),
-			'mobile' => Input::get('mobile'),
-			'email' => Input::get('email'),
-			'message_body' => Input::get('message')
-		);
-		/*dd($data);*/
-		$rules = array(
-			'name'  => 'required|max:50',
-			'mobil' => 'required|email',
-			'message_body' => 'required|min:6',
-		);
-		$validation = Validator::make($data, $rules);
-		if ($validation->fails())
-		{
-			return response()->json([
-				'success' => false,
-				'message' => $validation->messages()->first()
-			]);
-		}
-		Mail::send('emails.message', $data, function($message) {
-			$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення з сайту Eurostandard ');
-		});
-		return response()->json([
-			"success" => true
-		]);
-	}
-
-
-});
 
 
 Route::get('home', 'HomeController@index');//Для відображення результата після логування
@@ -82,6 +50,7 @@ Route::group(['prefix'=>'admin30x5', 'middleware' => ['auth', 'backend.init']], 
 });
 
 Route::group(['middleware' => 'frontend.init'], function(){
+	Route::post('/{lang}/send-message','Frontend\ArticleController@send');//отправка сообщения
 	Route::get('/{lang}/{type?}', 'Frontend\ArticleController@index')->where('type', 'main|company|news|gallery|contact|message');
 	Route::get('/{lang}/{type}/article-{id}', 'Frontend\ArticleController@show')->where('type', 'news|works');;
 });

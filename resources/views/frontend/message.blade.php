@@ -52,22 +52,22 @@
 
                         <div class="clearfix">
                             <label for="name"><h4>{{ trans('base.resume.name') }}</h4></label>
-                            <input id="name" type="text" name="name" required class="form-control" aria-describedby="sizing-addon2">
+                            <input id="name" type="text" required="required" name="name" required class="form-control" aria-describedby="sizing-addon2">
                         </div>
 
                         <div class="clearfix">
                             <label for="mobile"><h4>{{ trans('base.resume.mobile') }}</h4></label>
-                            <input id="mobile" type="tel" name="mobile" class="form-control" aria-describedby="sizing-addon2">
+                            <input id="mobile" type="number" required="required" name="mobile" class="form-control" aria-describedby="sizing-addon2">
                         </div>
 
                         <div class="clearfix">
                             <label for="email"><h4>{{ trans('base.email') }}</h4></label>
-                            <input id="email" type="tel" name="email" class="form-control" aria-describedby="sizing-addon2">
+                            <input id="email" type="email" required="required" name="email" class="form-control" aria-describedby="sizing-addon2">
                         </div>
 
                         <div class="clearfix">
                             <label for="message"><h4>{{ trans('base.your_message') }}</h4></label>
-                            <textarea id="message" name="message" rows="5" class="form-control" aria-describedby="sizing-addon2"></textarea>
+                            <textarea id="message" name="message_body" required="required" rows="5" class="form-control" aria-describedby="sizing-addon2"></textarea>
                         </div>
                         <input type="hidden" name="_method" value='post'/>
                         <input type="hidden" name="_token" value="{{csrf_token()}}"/>

@@ -34,7 +34,7 @@ return [
 	"different"            => "The :attribute and :other must be different.",
 	"digits"               => "The :attribute must be :digits digits.",
 	"digits_between"       => "The :attribute must be between :min and :max digits.",
-	"email"                => "The :attribute must be a valid email address.",
+	"email"                => "Wiadomość :attribute musi być prawidłowy adres e-mail.",
 	"filled"               => "The :attribute field is required.",
 	"exists"               => "The selected :attribute is invalid.",
 	"image"                => "The :attribute must be an image.",
@@ -43,11 +43,11 @@ return [
 	"ip"                   => "The :attribute must be a valid IP address.",
 	"max"                  => [
 		"numeric" => "The :attribute may not be greater than :max.",
-		"file"    => "The :attribute may not be greater than :max kilobytes.",
-		"string"  => "The :attribute may not be greater than :max characters.",
+		"file"    => "Rozmiar plik (:attribute) nie powinna przekraczać rozmiary :max kilobajt.",
+		"string"  => ":attribute nie powinna przekraczać rozmiary :max znakiv.",
 		"array"   => "The :attribute may not have more than :max items.",
 	],
-	"mimes"                => "The :attribute must be a file of type: :values.",
+	"mimes"                => ":attribute musi być rozszerzenie: :values.",
 	"min"                  => [
 		"numeric" => "The :attribute must be at least :min.",
 		"file"    => "The :attribute must be at least :min kilobytes.",

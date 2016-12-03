@@ -98,18 +98,18 @@ document.addEventListener("DOMContentLoaded", function(){
         var name = $("input[name=name]").val();
         var mobile = $("input[name=mobile]").val();
         var email = $("input[name=email]").val();
-        var message = $("textarea[name=message]").val();
+        var message_body = $("textarea[name=message_body]").val();
         var token = $("input[name=_token]").val();
        // var data = $('form#message-form').serialize();
         var data = {
             name: name,
             mobile: mobile,
             email: email,
-            message: message,
+            message_body: message_body,
             '_token': token
         }
         $.ajax({
-            url : "/send-message",
+            url : "send-message",
             method: "POST",
             data : data,
             dataType : "json",
