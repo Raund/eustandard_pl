@@ -65,9 +65,10 @@ return [
 	/* End Contact */
 	/* Footer*/
 	'send' => 'Wysłać',
+	'send_letter' => 'Wysłać list',
 	/* End Footer */
 	/* Script Resume*/
-	'success_send_resume' => 'Twoje CV wysłane pomyślnie!',
-	'error_send_resume' => 'Błąd wysyłania CV!',
+	'success_send_resume' => 'Twoje wiadomość wysłane pomyślnie!',
+	'error_send_resume' => 'Błąd wysyłania wiadomośći!',
 	/* /Script Resume*/
 ];

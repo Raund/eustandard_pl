@@ -66,9 +66,10 @@ return [
 	/* End Contact */
 	/* Footer*/
 	'send' => 'Надіслати',
+	'send_letter' => 'Надіслати листа',
 	/* End Footer */
 	/* Script Resume*/
-	'success_send_resume' => 'Ваше резюме успішно відправлено!',
-	'error_send_resume' => 'Помилка при відправці резюме!',
+	'success_send_resume' => 'Ваше повідомленя успішно відправлено!',
+	'error_send_resume' => 'Помилка при відправці повідомлення!',
 	/* /Script Resume*/
 ];

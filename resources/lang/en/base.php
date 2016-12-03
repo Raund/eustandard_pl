@@ -65,10 +65,11 @@ return [
 	/* End Contact */
 	/* Footer*/
 	'send' => 'Send',
+	'send_letter' => 'Send letter',
 	/* End Footer */
 	/* Script Resume*/
-	'success_send_resume' => 'Your resume send successfully!',
-	'error_send_resume' => 'Error sending resumes!',
+	'success_send_resume' => 'Your message send successfully!',
+	'error_send_resume' => 'Error sending message!',
 	/* /Script Resume*/
 
 ];

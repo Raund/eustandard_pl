@@ -231,7 +231,7 @@
 
 				<div class="col-sm-2 col-md-2 text-right wow fadeInLeft">
 
-					<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/message" role="button">{{ trans('base.all_news') }}</a></p>
+					<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/message" role="button">{{ trans('base.send_letter') }}</a></p>
 
 				</div>
 

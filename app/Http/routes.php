@@ -17,26 +17,23 @@ Route::post('/send-message', function(){
 			'name' => Input::get('name'),
 			'mobile' => Input::get('mobile'),
 			'email' => Input::get('email'),
-			'message' => Input::get('message')
+			'message_body' => Input::get('message')
 		);
 		/*dd($data);*/
 		$rules = array(
 			'name'  => 'required|max:50',
-			//'email' => 'required|email',
-			'message' => 'required|min:6',
+			'mobil' => 'required|email',
+			'message_body' => 'required|min:6',
 		);
 		$validation = Validator::make($data, $rules);
-
 		if ($validation->fails())
 		{
-			//return Redirect::to('/')->withErrors($validation)->withInput();
 			return response()->json([
 				'success' => false,
 				'message' => $validation->messages()->first()
 			]);
 		}
-
-		Mail::send('email.message', $data, function($message) {
+		Mail::send('emails.message', $data, function($message) {
 			$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення з сайту Eurostandard ');
 		});
 		return response()->json([
