@@ -93,14 +93,18 @@ footer .navbar-text{
     line-height: 45px;
 }
 .phone{
-    font-size: 18px;
+    font-size: 16px;
     display: inline-block;
     line-height: 20px;
     margin: 0;
     padding: 0;
 }
 .address{
-    width: 250px;
+    width: 180px;
+}
+footer .navbar-text a{
+    color: #00B2CC;
+    text-decoration: none;
 }
 .navbar-default .navbar-text a{
     font-size: 26px;
@@ -269,6 +273,30 @@ a.main-resume:hover{
         padding-left: 13px;
         padding-right: 13px;
     }
+    .min-center{
+        text-align: center;
+    }
+    .map{
+        margin-bottom: 15px;
+    }
+    .address-block{
+        text-align: center;
+    }
+    .address{
+        width: 170px;
+    }
+    footer .btn{
+        margin-top: 15px;
+    }
+    footer .navbar-text a{
+        padding-left: 60px;
+    }
+    footer .navbar-text{
+        float: none;
+    }
+    footer .navbar-brand{
+        display: none;
+    }
 }
 @media (max-width: 768px) {
     #resume-form,
@@ -294,21 +322,12 @@ a.main-resume:hover{
     footer{
         padding-top: 10px;
     }
-    footer .navbar-brand{
-        display: none;
-    }
-    footer .navbar-text a{
-        padding-left: 60px;
-    }
     .navbar-brand>img {
         width: 40px;
         margin-top: -8px;
     }
     .fix-height{
         min-height: 50px;
-    }
-    .min-center{
-        text-align: center;
     }
 }
 @media (max-width: 410px) {

@@ -130,7 +130,7 @@
 
 			@if(!(Request::is('*/news*')) )
 
-				<div class="col-sm-4 col-md-4">
+				<div class="col-md-4">
 
 					<div class="panel panel-default wow fadeInUp">
 
@@ -199,17 +199,17 @@
 
 			<div class="row">
 
-				<div class="col-sm-3 col-md-3 wow fadeInUp">
+				<div class="col-sm-12 col-md-3 wow fadeInUp min-center">
 
 					<a class="navbar-brand" href="/{{ App::getLocale() }}">
 						<img alt="Brand" src="/img/frontend/logo.jpg">
 					</a>
 
-					<p class="navbar-text">EUROSTANDARD sp. z o.o.</p>
+					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
 
 				</div>
 
-				<div class="col-sm-4 col-md-4 text-center wow fadeInDown">
+				<div class="col-sm-12 col-md-4 text-center wow fadeInDown min-center">
 
 					<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
 					<p>	{{  $texts->get('header.address') }}<br>
@@ -218,7 +218,7 @@
 
 				</div>
 
-				<div class="col-sm-3 col-md-3 text-left wow fadeInLeft">
+				<div class="col-sm-12 col-md-3 text-left wow fadeInLeft min-center">
 
 					<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
 
@@ -229,7 +229,7 @@
 
 				</div>
 
-				<div class="col-sm-2 col-md-2 text-right wow fadeInLeft">
+				<div class="col-sm-12 col-md-2 text-right wow fadeInLeft min-center">
 
 					<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/message" role="button">{{ trans('base.send_letter') }}</a></p>
 
