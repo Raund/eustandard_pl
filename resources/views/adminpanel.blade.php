@@ -210,12 +210,6 @@
                 <span class="menu-text"> Текстові блоки </span>
             </a>
             </li>
-            <li @if(Request::is('*/resume'))class="active"@endif>
-                <a href="{{ $url }}/resume">
-                    <i class="icon-list"></i>
-                    <span class="menu-text"> Резюме </span>
-                </a>
-            </li>
         </ul><!--/.nav-list-->
 
        <!-- <div class="sidebar-collapse" id="sidebar-collapse">
