@@ -102,6 +102,11 @@ return [
 	|
 	*/
 
-	'attributes' => [],
+	'attributes' => [
+		'name'=>'ПІБ',
+		'mobile'=>'Телефон мобільний',
+		'email'=>'E-mail',
+		'message_body'=>'Повідомлення',
+	],
 
 ];
