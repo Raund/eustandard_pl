@@ -91,10 +91,10 @@ $(function(){
 
 
 });
+/* Скрипт формы обратной связи */
 document.addEventListener("DOMContentLoaded", function(){
-    /* Скрипт формы обратной связи */
     $('#send-message').on('click',function(e){
-      //  $(this).prop('disabled', false);
+        $(this).attr('disabled', true);
         var name = $("input[name=name]").val();
         var mobile = $("input[name=mobile]").val();
         var email = $("input[name=email]").val();
@@ -118,21 +118,24 @@ document.addEventListener("DOMContentLoaded", function(){
                 if (data.success) {
                     swal(trans['base.success'], "", "success");
                     jQuery("#message-form").trigger("reset");
+                    $("#send-message").attr('disabled', false);
                 }
                 else {
                     swal(trans['base.error'], data.message, "error");
-                   // $("#send-message").attr('disabled', false);
+                    $("#send-message").attr('disabled', false);
                 }
             },
             error: function(data) {
                 swal(trans['base.error']);
+                $("#send-message").attr('disabled', false);
             }
         },'json');
         e.preventDefault();
     });
-    /* /Скрипт формы обратной связи 2*/
+
 });
-/* Скрипт формы обратной связи */
+/* /Скрипт формы обратной связи */
+/* Скрипт формы обратной связи 2 */
 document.addEventListener("DOMContentLoaded", function(){
     $("#contactform").submit(function(e){
        //
