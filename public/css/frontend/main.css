@@ -83,7 +83,7 @@ footer p{
     font-size: 16px;
 }
 footer .fa{
-    margin-right: 15px;
+    margin-right: -5px;
 }
 footer .navbar-text{
     display: block;
@@ -262,6 +262,12 @@ a.main-resume:hover{
 }
 .fix-height{
     min-height: 124px;
+}
+@media (max-width: 1200px) and (min-width: 991px) {
+    footer .fa-phone{
+        display: block;
+        margin-left: 25%;
+    }
 }
 @media (max-width: 1200px) {
     .navbar-text{

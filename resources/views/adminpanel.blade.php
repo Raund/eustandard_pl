@@ -80,7 +80,7 @@
             <a href="#" class="brand">
                 <img style="display: block;
     position: absolute;
-    margin-top: -3px;" width="30px" src="{{ asset('/img/backend/logo.jpg') }}" alt="PremiumClub" />
+    margin-top: -3px;" width="30px" src="{{ asset('/img/backend/logo.png') }}" alt="Eurostandard" />
                 <small style="margin-left: 40px;">
                     Eurostandard
                 </small>
