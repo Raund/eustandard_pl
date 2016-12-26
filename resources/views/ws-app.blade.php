@@ -107,7 +107,7 @@
 									</a>
 								</li>
 
-								<li @if(Request::is('*/contacts'))class="active"@endif>
+								<li @if(Request::is('*/contact'))class="active"@endif>
 									<a href="/{{ App::getLocale() }}/contact"><i class="fa fa-envelope"></i><br>
 										{{ trans('base.contacts') }}
 									</a>

@@ -1,16 +1,12 @@
 body{
-    /*
     background-image: url("../../img/frontend/bg2.jpg")
-    */
-    background-image: url(https://www.richardvanhooijdonk.com/wp-content/uploads/2015/11/factory-future.jpg);
-    background-attachment: fixed;
 }
 .panel-default>.panel-heading{
     background: none;
-    border-bottom: 1px solid #75CAEB;
+    border-bottom: 1px solid #000;
 }
 .jumbotron, .panel, .progress, .well {
-    border: 1px solid #75CAEB;
+    border: 1px solid #000;
 }
 .panel {
     border-width: 0 0px 4px;
@@ -34,15 +30,15 @@ body{
 }
 .navbar-default {
     background-color: #ffffff;
-    border-color: #75CAEB;
+    border-color: #000;
     box-shadow: 0 0 15px rgba(0,0,0, .15);
 }
 .navbar {
     border-width: 0 0 4px;
 }
 .pagination>li>a, .pagination>li>span, .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
-    background-color: #158CBA;
-    border-color: #75CAEB;
+    background-color: #686868;
+    border-color: #000;
     color: #fff;
 }
 .pager>li.active>a, .pagination>li.active>a {
@@ -78,41 +74,41 @@ footer .navbar-text {
 /*
 .navbar-default {
     background-color: #ffffff;
-    border-color: #75CAEB;
+    border-color: #000;
 }
 */
 .btn-primary {
     color: #fff;
-    background-color: #158CBA;
-    border-color: #127ba3;
+    background-color: #686868;
+    border-color: #242424;
 }
 .btn-group.open .dropdown-toggle.btn-primary, .btn-primary:focus, .btn-primary:hover {
-    background-color: #158CBA;
-    border-color: #127ba3;
+    background-color: #686868;
+    border-color: #242424;
 }
 .lang li a{
-    color: #158cba;
+    color: #ffffff;
 }
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover{
-    border-top: 3px solid #75CAEB;
+    border-top: 3px solid #000;
     padding-top: 17px;
 }
 .panel-default>.panel-heading{
-    border-bottom:1px solid #75CAEB;
+    border-bottom:1px solid #000;
     font-size: 20px;
     font-weight: bold;
 }a, a:hover{
-    color: #75CAEB;
+    color: #000000;
 }
 .navbar-default .navbar-text {
-    color: #75CAEB!important;
+    color: #000!important;
 }
 .lang li {
-    border-left: 1px solid #158cba;
+    border-left: 1px solid #ffffff;
 }
 footer{
     box-shadow: 0px 10px 15px -5px rgba(0,0,0,.3) inset;
@@ -125,7 +121,7 @@ footer{
 .img-responsive:hover,
 .thumbnail a>img:hover,
 .thumbnail>img:hover {
-    border: 2px solid #75CAEB;
+    border: 2px solid #000;
 }
 .carousel-inner>.item>a>img,
 .carousel-inner>.item>img,
@@ -140,29 +136,27 @@ footer{
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
     z-index: 3;
     color: #fff;
-    background-color: #158CBA;
-    border-color: #75CAEB;
+    background-color: #686868;
+    border-color: #000;
     cursor: default;
 }
 footer {
-    border-top: 1px solid #75CAEB;
+    border-top: 1px solid #000;
 }
 .navbar-fixed-top .navbar-nav>.active>a, .navbar-fixed-top .navbar-nav>.active>a:focus, .navbar-fixed-top .navbar-nav>.active>a:hover, .navbar-fixed-top .navbar-nav>li>a:focus, .navbar-fixed-top .navbar-nav>li>a:hover {
-    border-top: 3px solid #75CAEB;
+    border-top: 3px solid #000;
     padding-top: 7px;
 }
-/*
 .lang li {
-    border-left: 1px solid #75CAEB;
+    border-left: 1px solid #000;
 }
-*/
 .btn-primary.active,
 .btn-primary:active,
 .btn-primary:hover,
 .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #158CBA;
-    border-color: #127ba3;
+    background-color: #686868;
+    border-color: #000;
 }
 .btn-primary.active.focus,
 .btn-primary.active:focus,
@@ -174,6 +168,6 @@ footer {
 .open>.dropdown-toggle.btn-primary:focus,
 .open>.dropdown-toggle.btn-primary:hover {
     color: #fff;
-    background-color: #158CBA;
-    border-color: #75CAEB;
+    background-color: #686868;
+    border-color: #000;
 }
