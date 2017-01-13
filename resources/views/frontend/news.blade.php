@@ -6,21 +6,21 @@
 
         <div class="panel panel-default wow fadeInUp">
 
-            <div class="panel-heading">{{ trans('base.latest_news') }}</div>
+            <div class="panel-heading panel-heading_bg">{{ trans('base.latest_news') }}</div>
 
-            <div class="panel-body">
+            <div class="panel-body panel-body_news">
 
                 <div class="row">
 
                     @foreach($news as $new)
 
-                        <div class="r-block-item">
+                        <div class="r-block-item clearfix">
 
                             @if(count($new->getImages()) > 0)
 
                                 <div class="col-md-3">
 
-                                    <a href="/{{ App::getLocale() }}/news/article-{{ $new -> id }}" class="thumbnail">
+                                    <a href="/{{ App::getLocale() }}/news/article-{{ $new -> id }}" class="thumbnail news_img">
                                         <img src="/{{$new->getImages()[0]['min']}}" alt="...">
                                     </a>
 
@@ -34,21 +34,19 @@
 
                             @endif
 
-                                <h4>{{ $new->getTranslate('title') }}</h4>
+                                <h4 class="title_news">{{ $new->getTranslate('title') }}</h4>
 
-                                {!! str_limit($new->getTranslate('short_description'), 710) !!}
+                                <div class="block-content">{!! str_limit($new->getTranslate('short_description'), 710) !!}</div>
 
                                 <div class="clearfix">
 
-                                    <span class="pull-left">{{ trans('base.date') }}:<span class="news-date">{{ date('d/m/Y ',strtotime($new -> date)) }}</span></span>
+                                    <span class="pull-left"><span class="news-date">{{ trans('base.date') }}: {{ date('d/m/Y ',strtotime($new -> date)) }}</span></span>
 
-                                    <a href="/{{ App::getLocale() }}/news/article-{{ $new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+                                    <a href="/{{ App::getLocale() }}/news/article-{{ $new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                                 </div>
 
                             </div>
-
-                            <hr>
 
                         </div>
 

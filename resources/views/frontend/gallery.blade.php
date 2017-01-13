@@ -8,7 +8,7 @@
 
             <div class="panel panel-default wow fadeInDown">
 
-                <div class="panel-heading">{{$gallery_item->getTranslate('title')}}</div>
+                <div class="panel-heading panel-heading_bg">{{$gallery_item->getTranslate('title')}}</div>
 
                 <div class="panel-body">
 

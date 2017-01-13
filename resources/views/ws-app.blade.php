@@ -24,8 +24,8 @@
 
 	{{-- Bootstrap core CSS --}}
 	<link href="{{ asset('/css/frontend/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('/css/frontend/flex-light-theme.css') }}?ver={{ $version }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/main.css') }}?ver={{ $version }}" rel="stylesheet">
+	<link href="{{ asset('/css/frontend/last-theme-pl.css') }}?ver={{ $version }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/libs/unitegallery/dist/css/unite-gallery.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/plugins/sweetalert.css') }}" rel="stylesheet">
@@ -36,103 +36,110 @@
 
 	<div class="container">
 
-		<div class="row">
+		<header>
 
-			<ul class="col-md-12 text-right lang">
+				<ul class="col-md-12 text-right lang">
 
-				@foreach($langs as $lang)
+						<li @if(App::getLocale() == 'ua') class="active"@endif><a href="{{str_replace(url(App::getLocale()), url('ua'), Request::url())}}">ua</a></li>
+						<li @if(App::getLocale() == 'pl') class="active"@endif><a href="{{str_replace(url(App::getLocale()), url('pl'), Request::url())}}">pl</a></li>
+						<li @if(App::getLocale() == 'en') class="active"@endif><a href="{{str_replace(url(App::getLocale()), url('en'), Request::url())}}">en</a></li>
 
-					<li><a href="{{str_replace(url(App::getLocale()), url($lang->lang), Request::url())}}">{{$lang -> lang}}</a></li>
+				</ul>
 
-				@endforeach
 
-			</ul>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp">
 
-		</div>
+					<div class="clearfix">
 
-		<div class="row">
+						<a class="navbar-brand" href="/{{ App::getLocale() }}">
+							<img alt="Brand" src="/img/frontend/logo.png">
+						</a>
+
+						<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-4">
+
+					<div class="clearfix">
+
+						<ul class="soc">
+							<li><a class="fb" href="{{  $texts->get('header.fb') }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></li>
+							<li><a class="tw" href="{{  $texts->get('header.tw') }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+							<li><a class="yt" href="{{  $texts->get('header.yt') }}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+						</ul>
+
+						<div class="header-text">
+							{{  $texts->get('header.text') }}
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-4" style="text-align: right;">
+
+					<ul class="phone">
+						<li>{{  $texts->get('header.tel1') }}</li>
+						<li>{{  $texts->get('header.tel2') }}</li>
+					</ul>
+
+				</div>
+
+
 
 			<div class="col-md-12 fix-height">
 
-				<nav class="navbar navbar-default">
+				<ul class="nav nav-pills nav-justified">
 
-					<div class="container-fluid">
+					<li @if(Request::is(App::getLocale())) class="active"@endif>
+						<a href="/{{ App::getLocale() }}">
+							{{ trans('base.home') }}
+						</a>
+					</li>
 
-						{{-- Brand and toggle get grouped for better mobile display --}}
-						<div class="navbar-header">
+					<li @if(Request::is('*/company'))class="active"@endif>
+						<a href="/{{ App::getLocale() }}/company">
+							{{ trans('base.company') }}
+						</a>
+					</li>
 
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
+					<li @if(Request::is('*/news'))class="active"@endif>
+						<a href="/{{ App::getLocale() }}/news">
+							{{ trans('base.news') }}
+						</a>
+					</li>
 
-							<a class="navbar-brand" href="/{{ App::getLocale() }}">
-								<img alt="Brand" src="/img/frontend/logo.jpg">
-							</a>
+					<li @if(Request::is('*/gallery'))class="active"@endif>
+						<a href="/{{ App::getLocale() }}/gallery">
+							{{ trans('base.gallery') }}
+						</a>
+					</li>
 
-							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
+					<li @if(Request::is('*/contact'))class="active"@endif>
+						<a href="/{{ App::getLocale() }}/contact">
+							{{ trans('base.contacts') }}
+						</a>
+					</li>
 
-						</div>
+				</ul>
 
-						{{-- Collect the nav links, forms, and other content for toggling --}}
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-							<ul class="nav navbar-nav navbar-right r-menu">
-
-								<li @if(Request::is(App::getLocale())) class="active"@endif>
-									<a href="/{{ App::getLocale() }}">
-										<i class="fa fa-home"></i><br>
-										{{ trans('base.home') }}
-									</a>
-								</li>
-
-								<li @if(Request::is('*/company'))class="active"@endif>
-									<a href="/{{ App::getLocale() }}/company">
-										<i class="fa fa-paperclip"></i><br>
-										{{ trans('base.company') }}
-									</a>
-								</li>
-
-								<li @if(Request::is('*/news'))class="active"@endif>
-									<a href="/{{ App::getLocale() }}/news"><i class="fa fa-newspaper-o"></i><br>
-										{{ trans('base.news') }}
-									</a>
-								</li>
-
-								<li @if(Request::is('*/gallery'))class="active"@endif>
-									<a href="/{{ App::getLocale() }}/gallery"><i class="fa fa-camera"></i><br>
-										{{ trans('base.gallery') }}
-									</a>
-								</li>
-
-								<li @if(Request::is('*/contact'))class="active"@endif>
-									<a href="/{{ App::getLocale() }}/contact"><i class="fa fa-envelope"></i><br>
-										{{ trans('base.contacts') }}
-									</a>
-								</li>
-
-							</ul>
-
-						</div>{{-- /.navbar-collapse --}}
-
-					</div>{{-- /.container-fluid --}}
-
-				</nav>
 			</div>
 
-		</div>
+
+		</header>
 
 		<div class="row" style="min-height: 600px;">
 
 			@yield('content')
 
-			@if(!(Request::is('*/news*')) )
+			@if(!(Request::is('*/news*')) or (Request::is('*/news/article-*')) )
 
 				<div class="col-md-4">
 
-					<div class="panel panel-default wow fadeInUp">
+					<div class="panel panel-default bg_grey wow fadeInUp">
 
 						<div class="panel-heading">{{ trans('base.latest_news') }}</div>
 
@@ -142,35 +149,33 @@
 
 								@foreach($last_news as $last_new)
 
-									<div class="r-block-item">
-
-										<div class="col-md-12"><h4>{{ $last_new->getTranslate('title') }}</h4></div>
+									<div class="r-block-item clearfix">
 
 										@if(count($last_new->getImages()) > 0)
 
 											<div class="col-md-4">
 
-													<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail">
-														<img src="/{{$last_new->getImages()[0]['min']}}" alt="...">
-													</a>
+												<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail bg_grey">
+													<img src="/{{$last_new->getImages()[0]['min']}}" alt="...">
+												</a>
 
 											</div>
 
-											<div class="col-md-8">
+											<div class="col-md-8"><h4 class="title_sidebar title_sidebar_news">{{ $last_new->getTranslate('title') }}</h4></div>
 
 										@else
 
-											<div class="col-md-12">
+											<div class="col-md-12"><h4 class="title_sidebar">{{ $last_new->getTranslate('title') }}</h4></div>
 
 										@endif
 
-												{!! str_limit($last_new->getTranslate('short_description'), 140) !!}
+										<div class="col-md-12">
 
-												<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+											<div class="block-content"> {!! str_limit($last_new->getTranslate('short_description'), 140) !!}</div>
 
-											</div>
+											<a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
-											<hr>
+										</div>
 
 									</div>
 
@@ -193,34 +198,35 @@
 	</div> {{-- /container --}}
 
 	{{-- Site footer --}}
-	<footer>
 
-		<div class="container">
+	<div class="container">
+
+		<footer class="footer">
 
 			<div class="row">
 
-				<div class="col-sm-12 col-md-3 wow fadeInUp min-center">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 wow fadeInUp min-center">
 
 					<a class="navbar-brand" href="/{{ App::getLocale() }}">
-						<img alt="Brand" src="/img/frontend/logo.jpg">
+						<img alt="Brand" src="/img/frontend/logo.png">
 					</a>
 
-					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
+					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
 
 				</div>
 
-				<div class="col-sm-12 col-md-4 text-center wow fadeInDown min-center">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-6 text-center wow fadeInDown min-center">
 
-					<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+					<i class="fa fa-map-marker fa-4x" aria-hidden="true"></i>
 					<p>	{{  $texts->get('header.address') }}<br>
 						{{  $texts->get('header.address_poland') }}
 					</p>
 
 				</div>
 
-				<div class="col-sm-12 col-md-3 text-left wow fadeInLeft min-center">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right wow fadeInLeft min-center">
 
-					<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+					<i class="fa fa-phone fa-4x" aria-hidden="true"></i>
 
 					<ul class="phone">
 						<li>{{  $texts->get('header.tel1') }}</li>
@@ -229,18 +235,11 @@
 
 				</div>
 
-				<div class="col-sm-12 col-md-2 text-right wow fadeInLeft min-center">
-
-					<p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/message" role="button">{{ trans('base.send_letter') }}</a></p>
-
-				</div>
-
 			</div>
 
-		</div>
+		</footer>
 
-	</footer>
-
+	</div>
 
 <script src="{{ asset('/js/frontend/jquery-11.0.min.js') }}"></script>
 <script src="{{ asset('/js/frontend/bootstrap.js') }}"></script>

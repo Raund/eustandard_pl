@@ -24,12 +24,12 @@
 
                         <div id="tab{{$company_item->id}}" class="tab-pane fade in">
 
-                            <p>
+                            <div class="block-content">
                                 @if(count($company_item->getImages()) > 0)
                                     <img class="thumbnail" src="/{{$company_item->getImages()[0]['min']}}" alt="...">
                                 @endif
                                     {!! $company_item->getTranslate('description')!!}
-                            </p>
+                            </div>
 
                         </div>
 
@@ -43,7 +43,7 @@
 
         <div class="panel panel-default wow fadeInLeft">
 
-            <div class="panel-heading">{{ trans('base.gallery') }}</div>
+            <div class="panel-heading panel-heading_bg">{{ trans('base.gallery') }}</div>
 
             <div class="panel-body">
 

@@ -1,5 +1,11 @@
 @font-face {
-  font-family: "MagistralC";
+  font-family: "MagistralBlack";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/MagistralC/MagistralC.ttf") format("truetype"); }
+  src: url("../../fonts/frontend/MagistralBlack.TTF") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSansSemibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/frontend/OpenSansSemibold.ttf") format("truetype"); }

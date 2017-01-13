@@ -26,27 +26,13 @@
 
     <div class="col-md-8">
 
-        <div class="panel panel-default wow fadeInLeft">
+        <div class="panel panel-default about-us wow fadeInLeft">
 
-            <div class="panel-heading">{{ $main->getTranslate('title') }}</div>
+            <div class="panel-heading about-us_heading">{{ $main->getTranslate('title') }}</div>
 
-            <div class="panel-body">
+            <div class="panel-body about-us_body">
 
-                <div class="col-sm-4 col-md-3">
-
-                    <a href="#" class="thumbnail">
-
-                        @if(count($main->getImages()) > 0)
-
-                             <img src="/{{$main->getImages()[0]['min']}}" alt="...">
-
-                        @endif
-
-                    </a>
-
-                </div>
-
-                <div class="col-sm-8 col-md-9">
+                <div class="col-md-12">
 
                     {!! $main->getTranslate('short_description') !!}
 
@@ -62,11 +48,11 @@
 
         <div class="panel panel-default wow fadeInLeft">
 
-            <div class="panel-heading">{{ trans('base.video') }}</div>
+            <div class="panel-heading panel-heading_bg">{{ trans('base.video') }}</div>
 
             <div class="panel-body">
 
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/FwDaOcotclY" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="400" src="{{  $texts->get('main.video') }}" frameborder="0" allowfullscreen></iframe>
 
             </div>
 
