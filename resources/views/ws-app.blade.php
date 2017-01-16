@@ -25,6 +25,7 @@
 	{{-- Bootstrap core CSS --}}
 	<link href="{{ asset('/css/frontend/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/main.css') }}?ver={{ $version }}" rel="stylesheet">
+	<link href="{{ asset('/css/frontend/fonts.css') }}?ver={{ $version }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/last-theme-pl.css') }}?ver={{ $version }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/libs/unitegallery/dist/css/unite-gallery.css') }}" rel="stylesheet">

@@ -1,6 +1,8 @@
 body{
-    background-image: url("../../img/frontend/bg1.jpg");
+    background-image: url("../../img/frontend/bg/1.jpg");
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .navbar-fixed-top .navbar-nav>.active>a,
 .navbar-fixed-top .navbar-nav>.active>a:focus,
@@ -28,7 +30,7 @@ body{
     border-radius: 0;
     background-color: #b1e2e9;
     color: #ffffff;
-    font-family: "MagistralBlackC", sans-serif;
+    font-family: "MagistralBlack", "Arial Black",  sans-serif;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -40,6 +42,7 @@ body{
 }
 .panel{
     border-radius: 0;
+    margin-bottom: 45px;
 }
 .panel, .tab-content {
     border-width: 0;
@@ -53,7 +56,7 @@ body{
     bottom: -135px;
 }
 .tab-content{
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 7px 15px 0 rgba(0,0,0, .15);
@@ -114,7 +117,7 @@ footer .fa-3x{
 }
 .navbar-default .navbar-text a {
     font-size: 26px;
-    font-family: "MagistralBlackC";
+    font-family: "MagistralBlack";
 }
 footer .navbar-text {
     margin-top: 10px;
@@ -306,7 +309,7 @@ footer p {
     color: #ababab;
 }
 footer .navbar-text a{
-    font-family: "MagistralBlackC", sans-serif;
+    font-family: "MagistralBlack", "Arial Black",  sans-serif;
     font-size: 16px;
     color: #15b7cd;
 }
@@ -314,7 +317,7 @@ footer .navbar-text a{
     text-decoration: none;
 }
 #webstudio-slider {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     border-radius: 0;
     border: 1px solid #ccd0d2;
     box-shadow: 0 0 15px rgba(0,0,0, .15);
@@ -340,7 +343,7 @@ footer .navbar-text a{
     background-repeat: no-repeat;
 }
 .ug-slider-wrapper .ug-textpanel{
-    width: 30% !important;
+    width: 55% !important;
     top: 15% !important;
     right: 15%;
 }
@@ -455,7 +458,7 @@ footer .navbar-text a{
     background-color: #8adbe6;
     color: #ffffff;
     line-height: 28px;
-    font-family: "MagistralBlackC", sans-serif;
+    font-family: "MagistralBlack", "Arial Black",  sans-serif;
     text-transform: uppercase;
 }
 .panel-body_contact{
@@ -481,6 +484,7 @@ footer .navbar-text a{
 }
 .block-content .thumbnail{
     float: left;
+    min-width: 100%;
     margin-right: 15px;
     margin-bottom: 0;
 }
@@ -528,7 +532,7 @@ header .navbar-text{
 header .navbar-text a{
     color: #15b7cd;
     font-size: 24px;
-    font-family: "MagistralBlackC", sans-serif;
+    font-family: "MagistralBlack", "Arial Black",  sans-serif;
     text-transform: uppercase;
     line-height: 70px;
 }
@@ -557,6 +561,8 @@ header .soc li:nth-child(3){
     margin-bottom: 12px;
 }
 header .phone{
+    font-size: 22px;
+    color: #15b7cd;
     margin-top: 25px;
 }
 header .lang{
@@ -594,20 +600,46 @@ header .lang li:hover a{
     border-bottom:0;
 }
 @media (max-width: 1200px) {
-    .navbar-text{
+    .navbar-text {
         display: block;
         margin-left: 0;
     }
-    .navbar-brand{
+
+    .navbar-brand {
         padding-left: 0;
     }
+
     header .navbar-text a {
         font-size: 20px;
+    }
+
+    header .phone {
+        font-size: 19px;
+    }
+    .ug-button-tile-navigation.ug-button-tile-left{
+        left: -309px;
+        z-index: 15;
+    }
+    .ug-button-tile-navigation.ug-button-tile-right{
+        right: -307px;
+        z-index: 15;
     }
 }
 @media (max-width: 991px) {
     header .header-text{
         display: none;
+    }
+    header .phone {
+        font-size: 22px;
+    }
+    .panel-body h4.title_sidebar_news{
+        margin-left: 0;
+    }
+    .ug-button-tile-navigation.ug-button-tile-left{
+        left: -361px;
+    }
+    .ug-button-tile-navigation.ug-button-tile-right{
+        right: -359px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -625,6 +657,7 @@ header .lang li:hover a{
         float: none;
         margin-bottom: 10px;
         padding-bottom: 0;
+        padding-right: 0;
         text-align: center;
     }
     .navbar-brand>img{
@@ -671,5 +704,14 @@ header .lang li:hover a{
         width: 100% !important;
         bottom: 30px !important;
         right: 0;
+    }
+    .ug-button-tile-navigation.ug-button-tile-left{
+        display: none;
+    }
+    .ug-button-tile-navigation.ug-button-tile-right{
+        display: none;
+    }
+    .ug-gallery-wrapper .ug-textpanel-title{
+        font-size: 18px!important;
     }
 }

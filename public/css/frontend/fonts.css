@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'MagistralBlack';
-	src: url('../../fonts/MagistralBlack/MagistralBlack.eot');
-	src: local('☺'), url('../../fonts/MagistralBlack/MagistralBlack.woff') format('woff'), url('../../fonts/MagistralBlack/MagistralBlack.ttf') format('truetype'), url('../../fonts/MagistralBlack/MagistralBlack.svg') format('svg');
+	src: url('../../fonts/frontend/MagistralBlack/MagistralBlack.eot');
+	src: local('☺'), url('../../fonts/frontend/MagistralBlack/MagistralBlack.woff') format('woff'), url('../../fonts/frontend/MagistralBlack/MagistralBlack.ttf') format('truetype'), url('../../fonts/frontend/MagistralBlack/MagistralBlack.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -10,4 +10,4 @@
   font-family: "OpenSansSemibold";
   font-style: normal;
   font-weight: normal;
-  src: url("../../fonts/frontend/OpenSansSemibold.ttf") format("truetype"); }
+  src: url("../../fonts/frontend/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype"); }
