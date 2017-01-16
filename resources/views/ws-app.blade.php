@@ -46,49 +46,50 @@
 
 				</ul>
 
+				<div class="clearfix">
 
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp">
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 wow fadeInUp">
 
-					<div class="clearfix">
+						<div class="clearfix">
 
-						<a class="navbar-brand" href="/{{ App::getLocale() }}">
-							<img alt="Brand" src="/img/frontend/logo.png">
-						</a>
+							<a class="navbar-brand" href="/{{ App::getLocale() }}">
+								<img alt="Brand" src="/img/frontend/logo.png">
+							</a>
 
-						<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
+							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
 
-					</div>
-
-				</div>
-
-				<div class="col-md-4">
-
-					<div class="clearfix">
-
-						<ul class="soc">
-							<li><a class="fb" href="{{  $texts->get('header.fb') }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></li>
-							<li><a class="tw" href="{{  $texts->get('header.tw') }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-							<li><a class="yt" href="{{  $texts->get('header.yt') }}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
-						</ul>
-
-						<div class="header-text">
-							{{  $texts->get('header.text') }}
 						</div>
 
 					</div>
 
+					<div class="col-xs-12 col-sm-1 col-md-5 col-lg-4">
+
+						<div class="clearfix">
+
+							<ul class="soc">
+								<li><a class="fb" href="{{  $texts->get('header.fb') }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></li>
+								<li><a class="tw" href="{{  $texts->get('header.tw') }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+								<li><a class="yt" href="{{  $texts->get('header.yt') }}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+							</ul>
+
+							<div class="header-text">
+								{{  $texts->get('header.text') }}
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-xs-12 col-sm-5 col-md-3 col-lg-4" style="text-align: right;">
+
+						<ul class="phone">
+							<li>{{  $texts->get('header.tel1') }}</li>
+							<li>{{  $texts->get('header.tel2') }}</li>
+						</ul>
+
+					</div>
+
 				</div>
-
-				<div class="col-md-4" style="text-align: right;">
-
-					<ul class="phone">
-						<li>{{  $texts->get('header.tel1') }}</li>
-						<li>{{  $texts->get('header.tel2') }}</li>
-					</ul>
-
-				</div>
-
-
 
 			<div class="col-md-12 fix-height">
 

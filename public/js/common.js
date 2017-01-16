@@ -35,7 +35,7 @@ $(function(){
         slider_bullets_offset_hor:0,				//bullets horizontal offset
         slider_bullets_offset_vert:10,
         slider_textpanel_title_color:"#ffffff",				//textpanel title color. if null - take from css
-        slider_textpanel_title_font_family:"MagistralBlack",		//textpanel title font family. if null - take from css
+        slider_textpanel_title_font_family:"MagistralBlackC",		//textpanel title font family. if null - take from css
         slider_textpanel_title_text_align:null,			//textpanel title text align. if null - take from css
         slider_textpanel_title_font_size: 30,
         slider_textpanel_desc_color:"#ffffff",				//textpanel description font family. if null - take from css

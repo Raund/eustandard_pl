@@ -1,7 +1,4 @@
 body{
-    /*
-    background-image: url("../../img/frontend/bg.jpg")
-    */
     background-image: url("../../img/frontend/bg1.jpg");
     background-attachment: fixed;
 }
@@ -507,6 +504,7 @@ header .nav li a{
     font-size: 18px;
     line-height: 24px;
     font-family: "OpenSansSemibold", sans-serif;
+    letter-spacing: 1.25px;
 }
 header .nav li.active a,
 header .nav li:hover a{
@@ -594,4 +592,84 @@ header .lang li:hover a{
 }
 .r-block-item_article{
     border-bottom:0;
+}
+@media (max-width: 1200px) {
+    .navbar-text{
+        display: block;
+        margin-left: 0;
+    }
+    .navbar-brand{
+        padding-left: 0;
+    }
+    header .navbar-text a {
+        font-size: 20px;
+    }
+}
+@media (max-width: 991px) {
+    header .header-text{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    footer .navbar-brand{
+        display: block;
+    }
+    footer .navbar-text a{
+        padding-left: 0;
+        font-size: 24px;
+    }
+}
+@media (max-width: 768px) {
+    header .navbar-brand{
+        display: block;
+        float: none;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .navbar-brand>img{
+        margin: 0 auto;
+    }
+    header .navbar-text{
+        margin-top: 0;
+        text-align: center;
+    }
+    header .navbar-text a{
+        line-height: 20px;
+    }
+    header .soc{
+        float: none;
+        text-align: center;
+    }
+    header .soc li{
+        display: inline-block;
+        margin-left: 20px;
+    }
+    header .soc li:first-child{
+        margin-left: 0;
+    }
+    header .phone{
+        display: block;
+        margin-top: 0;
+        text-align: center;
+    }
+    header .nav{
+        background-color: rgba(255,255,255,.6);
+    }
+    .about-us_body{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .description-show{
+        margin-right: 0;
+    }
+    footer .navbar-text a{
+        font-size: 24px;
+        padding-left: 0;
+    }
+    .ug-slider-wrapper .ug-textpanel{
+        width: 100% !important;
+        bottom: 30px !important;
+        right: 0;
+    }
 }
