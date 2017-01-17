@@ -49,7 +49,7 @@
 
 				<div class="clearfix">
 
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 wow fadeInUp">
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 wow fadeInDown">
 
 						<div class="clearfix">
 
@@ -63,7 +63,7 @@
 
 					</div>
 
-					<div class="col-xs-12 col-sm-1 col-md-5 col-lg-4">
+					<div class="col-xs-12 col-sm-1 col-md-5 col-lg-4 wow fadeInUp">
 
 						<div class="clearfix">
 
@@ -81,7 +81,7 @@
 
 					</div>
 
-					<div class="col-xs-12 col-sm-5 col-md-3 col-lg-4" style="text-align: right;">
+					<div class="col-xs-12 col-sm-5 col-md-3 col-lg-4 wow fadeInDown" style="text-align: right;">
 
 						<ul class="phone">
 							<li>{{  $texts->get('header.tel1') }}</li>
