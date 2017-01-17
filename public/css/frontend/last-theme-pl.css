@@ -525,9 +525,13 @@ header .nav-pills>li.active>a:hover{
 }
 header .navbar-brand{
     height: auto;
+    margin-top: 10px;
 }
 header .navbar-text{
     margin-right: 0;
+    margin-top: 25px;
+    position: relative;
+    left: 6%;
 }
 header .navbar-text a{
     color: #15b7cd;
@@ -553,6 +557,9 @@ header .soc{
     float: right;
     margin: 0;
     padding: 0;
+}
+header .soc a:hover .fa{
+    color: #1c808e;
 }
 header .soc li{
     margin-bottom: 15px;
@@ -666,6 +673,7 @@ header .lang li:hover a{
     header .navbar-text{
         margin-top: 0;
         text-align: center;
+        left: 0;
     }
     header .navbar-text a{
         line-height: 20px;

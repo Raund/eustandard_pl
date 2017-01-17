@@ -70,7 +70,7 @@
 							<ul class="soc">
 								<li><a class="fb" href="{{  $texts->get('header.fb') }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></li>
 								<li><a class="tw" href="{{  $texts->get('header.tw') }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-								<li><a class="yt" href="{{  $texts->get('header.yt') }}"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+								<li><a class="sk" href="skype:{{  $texts->get('header.sk') }}"><i class="fa fa-skype fa-2x" aria-hidden="true"></i></a></li>
 							</ul>
 
 							<div class="header-text">
@@ -84,8 +84,8 @@
 					<div class="col-xs-12 col-sm-5 col-md-3 col-lg-4 wow fadeInDown" style="text-align: right;">
 
 						<ul class="phone">
+							<li>{{  $texts->get('contact.poland_phone_1') }}</li>
 							<li>{{  $texts->get('header.tel1') }}</li>
-							<li>{{  $texts->get('header.tel2') }}</li>
 						</ul>
 
 					</div>
@@ -220,8 +220,8 @@
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-6 text-center wow fadeInDown min-center">
 
 					<i class="fa fa-map-marker fa-4x" aria-hidden="true"></i>
-					<p>	{{  $texts->get('header.address') }}<br>
-						{{  $texts->get('header.address_poland') }}
+					<p>	{{  $texts->get('header.address_poland') }}<br>
+						{{  $texts->get('header.address') }}
 					</p>
 
 				</div>
@@ -231,8 +231,8 @@
 					<i class="fa fa-phone fa-4x" aria-hidden="true"></i>
 
 					<ul class="phone">
+						<li>{{  $texts->get('contact.poland_phone_1') }}</li>
 						<li>{{  $texts->get('header.tel1') }}</li>
-						<li>{{  $texts->get('header.tel2') }}</li>
 					</ul>
 
 				</div>
