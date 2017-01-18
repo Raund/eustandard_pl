@@ -606,6 +606,27 @@ header .lang li:hover a{
 .r-block-item_article{
     border-bottom:0;
 }
+.sh_btn,
+.sh_header{
+    background-color: #15b7cd!important;
+}
+.sh_chat{
+    border: 1px solid #15b7cd!important;
+}
+.sh_button{
+    background-color: #cf95eb !important;
+    border: none !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    font-family: "OpenSansSemibold", sans-serif !important;
+}
+.sh_button:hover {
+    background-color: #dfb4f4 !important;
+}
+.sh_button_gray_complete{
+    font-size: 12px !important;
+}
 @media (max-width: 1200px) {
     .navbar-text {
         display: block;
