@@ -60,8 +60,8 @@ return [
 	/* End Resume*/
 	/* Contact*/
 	'ukraine_office' => 'Biuro na Ukrainie',
-	'poland_office_1' => 'Biuro w Polsce №1',
-	'poland_office_2' => 'Biuro w Polsce №2',
+	'poland_office_1' => 'Biuro w Polsce',
+	'poland_office_2' => 'Biuro na Terenie Srocznia Remontowa',
 	/* End Contact */
 	/* Footer*/
 	'send' => 'Wysłać',

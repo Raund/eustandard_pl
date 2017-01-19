@@ -529,9 +529,6 @@ header .navbar-brand{
 }
 header .navbar-text{
     margin-right: 0;
-    margin-top: 25px;
-    position: relative;
-    left: 6%;
 }
 header .navbar-text a{
     color: #15b7cd;
@@ -627,6 +624,72 @@ header .lang li:hover a{
 .sh_button_gray_complete{
     font-size: 12px !important;
 }
+.tab-pane table{
+    width: 95% !important;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+}
+.tab-pane table td:nth-child(2){
+    background-color: #f5f5f5;
+}
+.tab-pane table td{
+    border-bottom: 30px solid #fff;
+}
+.tab-pane table tr:nth-child(2) td img{
+    border-radius: 50%;
+    box-shadow: 0 0 10px #15b7cd;
+}
+.tab-pane table td img{
+    width: 100% !important;
+    height: auto !important;
+}
+.tab-pane table td:nth-child(even){
+    width: 60%;
+    padding-left: 5%;
+}
+.tab-pane table td:nth-child(odd){
+    width: 40%;
+    padding-right: 5%;
+}
+.tab-pane table td:nth-child(even) p:first-child{
+    font-family: "OpenSansSemibold",'Comic Sans MS', cursive;;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.tab-pane table td:nth-child(even) p:nth-child(2){
+    font-family: "MagistralBlack", "Arial Black";
+    font-size: 21px;
+    text-transform: uppercase;
+}
+.tab-pane table tr:nth-child(2) td:nth-child(even) p:nth-child(2){
+    color: #15b7cd;
+    font-family: "MagistralBlack", "Arial Black";
+    font-size: 21px;
+    text-transform: uppercase;
+}
+.tab-pane table td:nth-child(even) p:nth-child(3){
+    padding: 5px 40px;
+    background: url("../../img/frontend/phone.png") left center no-repeat;
+    -webkit-background-size: 32px;
+    background-size: 32px;
+    font-family: "OpenSansSemibold";
+    font-size: 16px;
+}
+.tab-pane table tr:nth-child(2) td:nth-child(even) p:nth-child(3),
+.tab-pane table tr:nth-child(2) td:nth-child(even) p:nth-child(4){
+    padding: 5px 0;
+    background: none;
+    font-family: "OpenSansSemibold";
+    font-size: 16px;
+}
+.tab-pane table td:nth-child(even) p:nth-child(4){
+    padding: 5px 40px;
+    background: url("../../img/frontend/skype.png") left center no-repeat;
+    -webkit-background-size: 32px;
+    background-size: 32px;
+}
+
 @media (max-width: 1200px) {
     .navbar-text {
         display: block;

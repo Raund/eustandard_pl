@@ -60,8 +60,8 @@ return [
 	/* End Resume*/
 	/* Contact*/
 	'ukraine_office' => 'Office in Ukraine',
-	'poland_office_1' => 'Office in Poland №1',
-	'poland_office_2' => 'Office in Poland №2',
+	'poland_office_1' => 'Office in Poland',
+	'poland_office_2' => 'Shipyard',
 	/* End Contact */
 	/* Footer*/
 	'send' => 'Send',

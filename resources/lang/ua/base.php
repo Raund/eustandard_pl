@@ -61,8 +61,8 @@ return [
 	/* End Resume*/
 	/* Contact*/
 	'ukraine_office' => 'Офіс в Укрвїні',
-	'poland_office_1' => 'Офіс в Польщі №1',
-	'poland_office_2' => 'Офіс в Польщі №2',
+	'poland_office_1' => 'Офіс в Польщі',
+	'poland_office_2' => 'Cудноремонтний завод',
 	/* End Contact */
 	/* Footer*/
 	'send' => 'Надіслати',
