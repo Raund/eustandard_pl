@@ -3,10 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>
+{{--
 		@if($meta ->getTranslate('meta_title'))
 			{{ $meta ->getTranslate('meta_title') }}
 		@else Eurostandard
 		@endif
+--}}
+		Eustandard
 	</title>
 
 	@if(isset($meta))
@@ -53,11 +56,11 @@
 
 						<div class="clearfix">
 
-							<a class="navbar-brand" href="/{{ App::getLocale() }}">
+							<a class="navbar-brand" href="/{{ App::getLocale() }}/reconstruction">
 								<img alt="Brand" src="/img/frontend/logo.png">
 							</a>
 
-							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
+							<p class="navbar-text"><a href="/{{ App::getLocale() }}/reconstruction">EUROSTANDARD</a></p>
 
 						</div>
 
@@ -97,25 +100,25 @@
 				<ul class="nav nav-pills nav-justified">
 
 					<li @if(Request::is(App::getLocale())) class="active"@endif>
-						<a href="/{{ App::getLocale() }}">
+						<a href="/{{ App::getLocale() }}/reconstruction">
 							{{ trans('base.home') }}
 						</a>
 					</li>
 
 					<li @if(Request::is('*/company'))class="active"@endif>
-						<a href="/{{ App::getLocale() }}/company">
+						<a href="/{{ App::getLocale() }}/{{--company--}}reconstruction">
 							{{ trans('base.company') }}
 						</a>
 					</li>
 
 					<li @if(Request::is('*/news'))class="active"@endif>
-						<a href="/{{ App::getLocale() }}/news">
+						<a href="/{{ App::getLocale() }}/{{--news--}}reconstruction">
 							{{ trans('base.news') }}
 						</a>
 					</li>
 
 					<li @if(Request::is('*/gallery'))class="active"@endif>
-						<a href="/{{ App::getLocale() }}/gallery">
+						<a href="/{{ App::getLocale() }}/{{--gallery--}}reconstruction">
 							{{ trans('base.gallery') }}
 						</a>
 					</li>
@@ -139,7 +142,7 @@
 
 			@if(!(Request::is('*/news*')) or (Request::is('*/news/article-*')) )
 
-				<div class="col-md-4">
+				<div class="col-md-4" {{--for reconstruction--}}style="display: none;"{{--END for reconstruction--}}>
 
 					<div class="panel panel-default bg_grey wow fadeInUp">
 
@@ -209,11 +212,11 @@
 
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 wow fadeInUp min-center">
 
-					<a class="navbar-brand" href="/{{ App::getLocale() }}">
+					<a class="navbar-brand" href="/{{ App::getLocale() }}/reconstruction">
 						<img alt="Brand" src="/img/frontend/logo.png">
 					</a>
 
-					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
+					<p class="navbar-text"><a href="/{{ App::getLocale() }}/reconstruction">EUROSTANDARD</a></p>
 
 				</div>
 

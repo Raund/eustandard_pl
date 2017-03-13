@@ -14,7 +14,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return redirect('/pl/', 302);
+		return redirect('/pl/reconstruction', 302);
 	}
 
 

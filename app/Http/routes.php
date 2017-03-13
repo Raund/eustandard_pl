@@ -51,7 +51,7 @@ Route::group(['prefix'=>'admin30x5', 'middleware' => ['auth', 'backend.init']], 
 
 Route::group(['middleware' => 'frontend.init'], function(){
 	Route::post('/{lang}/send-message','Frontend\ArticleController@send');//отправка сообщения
-	Route::get('/{lang}/{type?}', 'Frontend\ArticleController@index')->where('type', 'main|company|news|gallery|contact|message');
+	Route::get('/{lang}/{type?}', 'Frontend\ArticleController@index')->where('type', 'main|company|news|gallery|contact|message|reconstruction');
 	Route::get('/{lang}/{type}/article-{id}', 'Frontend\ArticleController@show')->where('type', 'news|works');;
 });
 
