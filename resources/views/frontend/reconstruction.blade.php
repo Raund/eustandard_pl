@@ -4,7 +4,7 @@
 
     <div class="col-md-12">
 
-        <img src="/img/frontend/reconstruction3.png" alt="" width="100%">
+        <img src="/img/frontend/reconstruction3.png" alt="" width="100%" style="opacity: 0.5;">
 
     </div>
 
